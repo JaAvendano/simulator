@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  background-color: grey;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  width: 100%;
+  background-color: grey;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.main-view {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.component-container {
+  margin-top: 2%;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+@media (min-width: 1400px) {
+  .form-container {
+    width: 66%;
+    margin: auto;
+  }
+  .content-holder {
+    width: 45%;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  .content-form {
+    position: relative;
+    top: 33%;
+  }
+  .form-holder {
+    height: 520px;
+    margin: auto;
+    text-align: center;
+    width: 45%;
+  }
+
+  .mat-form-field {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  .form-container {
+    width: 66%;
+    margin: auto;
+  }
+  .content-holder {
+    width: 45%;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  .content-form {
+    position: relative;
+    top: 33%;
+  }
+  .form-holder {
+    height: 520px;
+    margin: auto;
+    text-align: center;
+    width: 45%;
+  }
+
+  .mat-form-field {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .content-container {
+    width: 90%;
+  }
+  .content-holder {
+    width: 80%;
+  }
+  .form-holder {
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    .content-container {
+      width: 90%;
+    }
+    .content-holder {
+      width: 95%;
+    }
+    .form-container {
+      width: 90%;
+    }
+  }
+}

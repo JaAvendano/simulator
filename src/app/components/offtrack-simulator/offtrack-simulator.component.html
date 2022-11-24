@@ -1,1 +1,59 @@
-<p>offtrack-simulator works!</p>
+<div class="simulation-view">
+  <section class="display-container">
+    <mat-card class="form-container">
+      <mat-card-content>
+        <canvas id="matterjsview"></canvas>
+        <p><strong>L: </strong>{{ offTrack.L | number }}</p>
+        <p><strong>C: </strong>{{ offTrack.C | number }}</p>
+      </mat-card-content>
+    </mat-card>
+  </section>
+  <section class="form-holder">
+    <mat-card class="form-container">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Offtrack params</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="label-container">
+            <label>Angle</label>
+            <label>{{ offTrack.angle }}</label>
+          </div>
+          <mat-slider [(ngModel)]="offTrack.angle" (input)="calcOffTrack()">
+          </mat-slider>
+
+          <mat-form-field appearance="fill">
+            <mat-label>R</mat-label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="offTrack.R"
+              (input)="calcOffTrack()"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>L1</mat-label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="offTrack.L1"
+              (input)="calcOffTrack()"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>L2</mat-label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="offTrack.L2"
+              (input)="calcOffTrack()"
+            />
+          </mat-form-field>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card>
+  </section>
+</div>

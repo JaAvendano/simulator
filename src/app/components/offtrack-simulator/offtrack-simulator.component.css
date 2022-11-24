@@ -1,0 +1,10 @@
+.simulation-view{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.display-container{
+    width: 100%;
+    margin: auto;
+}

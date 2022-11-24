@@ -1,28 +1,12 @@
 <div class="simulation-view">
   <section class="cart-container">
-    <svg
-      [attr.width]="svgParams.width"
-      [attr.height]="svgParams.height"
-      [attr.viewBox]="svgParams.viewBox"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        [attr.x]="rectParams.x"
-        [attr.y]="rectParams.y"
-        [attr.width]="rectParams.width"
-        [attr.height]="rectParams.height"
-      >
-        <animateTransform
-          attributeName="transform"
-          attributeType="XML"
-          type="rotate"
-          [attr.from]="animateTransformParams.from"
-          [attr.to]="animateTransformParams.to"
-          dur="10s"
-          repeatCount="indefinite"
-        />
-      </rect>
-    </svg>
+    <canvas id="matterjsview"></canvas>
+    <div class="btn-wrapper">
+      <button mat-raised-button color="primary" (click)="applyForce()">
+        Start
+      </button>
+      <button mat-raised-button color="warn">Reset</button>
+    </div>
   </section>
   <section class="form-holder">
     <mat-card class="form-container">
@@ -33,48 +17,28 @@
           </mat-expansion-panel-header>
           <mat-form-field appearance="fill">
             <mat-label>Svg width</mat-label>
-            <input matInput type="number" [(ngModel)]="svgParams.width" />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Svg height</mat-label>
-            <input matInput type="number" [(ngModel)]="svgParams.height" />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Svg viewBox X1</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="svgParams.viewBoxX1"
-              (input)="updateViewBox()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Svg viewBox Y1</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="svgParams.viewBoxY1"
-              (input)="updateViewBox()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
 
           <mat-form-field appearance="fill">
             <mat-label>Svg viewBox X2</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="svgParams.viewBoxX2"
-              (input)="updateViewBox()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Svg viewBox Y1</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="svgParams.viewBoxY2"
-              (input)="updateViewBox()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
         </mat-expansion-panel>
       </mat-accordion>
@@ -88,19 +52,19 @@
 
           <mat-form-field appearance="fill">
             <mat-label>Rect x</mat-label>
-            <input matInput type="number" [(ngModel)]="rectParams.x" />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Rect y</mat-label>
-            <input matInput type="number" [(ngModel)]="rectParams.y" />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Rect width</mat-label>
-            <input matInput type="number" [(ngModel)]="rectParams.width" />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Rect height</mat-label>
-            <input matInput type="number" [(ngModel)]="rectParams.height" />
+            <input matInput type="number" />
           </mat-form-field>
         </mat-expansion-panel>
       </mat-accordion>
@@ -113,57 +77,27 @@
           </mat-expansion-panel-header>
           <mat-form-field appearance="fill">
             <mat-label>From 1</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="animateTransformParams.from1"
-              (input)="updateAnimateTransform()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>From 2</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="animateTransformParams.from2"
-              (input)="updateAnimateTransform()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>From 3</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="animateTransformParams.from3"
-              (input)="updateAnimateTransform()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>To 1</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="animateTransformParams.to1"
-              (input)="updateAnimateTransform()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>To 2</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="animateTransformParams.to2"
-              (input)="updateAnimateTransform()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>To 3</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="animateTransformParams.to3"
-              (input)="updateAnimateTransform()"
-            />
+            <input matInput type="number" />
           </mat-form-field>
         </mat-expansion-panel>
       </mat-accordion>

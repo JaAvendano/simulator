@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //materials library
+import { MatSliderModule } from '@angular/material/slider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
@@ -49,6 +50,7 @@ import { OfftrackSimulatorComponent } from './components/offtrack-simulator/offt
     AppRoutingModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatSliderModule,
     MatTableModule,
     MatDialogModule,
     MatSidenavModule,

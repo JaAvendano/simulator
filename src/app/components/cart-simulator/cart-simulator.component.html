@@ -5,7 +5,12 @@
       <button mat-raised-button color="primary" (click)="applyForce()">
         Start
       </button>
-      <button mat-raised-button color="warn">Reset</button>
+      <button mat-raised-button color="default" (click)="applyVerticalForce()">
+        Down
+      </button>
+      <button mat-raised-button color="warn" (click)="cartSimulation()">
+        Reset
+      </button>
     </div>
   </section>
   <section class="form-holder">

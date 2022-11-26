@@ -36,12 +36,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartSimulatorComponent } from './components/cart-simulator/cart-simulator.component';
 import { OfftrackSimulatorComponent } from './components/offtrack-simulator/offtrack-simulator.component';
+import { LoadSimuationComponent } from './components/load-simuation/load-simuation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CartSimulatorComponent,
     OfftrackSimulatorComponent,
+    LoadSimuationComponent,
   ],
   imports: [
     FormsModule,
